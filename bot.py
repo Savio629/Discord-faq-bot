@@ -52,7 +52,7 @@ async def on_message(message):
 async def menu(interaction: discord.Interaction):
     await interaction.response.send_message("Please select an option from the menu:", ephemeral=True)
     await show_menu(interaction, "menu")
-
+#for questions inside buttons
 # async def show_menu(interaction, menu_key):
 #     # Fetch options from the options data
 #     options = options_data.get(menu_key, [])
@@ -69,6 +69,8 @@ async def menu(interaction: discord.Interaction):
 #         view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
 
 #     await interaction.followup.send(view=view, ephemeral=True)
+
+#for keys inside buttons
 async def show_menu(interaction, menu_key):
     # Fetch options from the options data
     options = options_data.get(menu_key, [])
