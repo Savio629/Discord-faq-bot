@@ -1,0 +1,86 @@
+{
+    "menu":[
+       "A guide to C4GT",
+       "Sign Up",
+       "Find Projects",
+       "Start Contributing",
+       "Need Support in Contributing",
+       "Explore Rewards",
+       "Get Employment",
+       "Have grievances?"
+    ],
+    "A guide to C4GT":[
+       "What is C4GT?",
+       "How to navigate the server?",
+       "Programs organized by C4GT",
+       "How to set up a C4GT College GovTech Office"
+    ],
+    "What is C4GT?":"C4GT is an ecosystem initiative to drive progress in Digital Public Goods (DPG), Digital Public Infrastructure (DPI), and Tech for Good products – innovations shaping the technological revolution globally. The initiative aims to catalyze and grow a self-sustaining open-source community of builders, adopters, and contributors around DPGs/DPI & Tech for Good products. C4GT Website- https://www.codeforgovtech.in/ Samagra - Transforming Governance is implementing C4GT with support from BMGF, ONI, DPGA & GitHub.",
+    "How to navigate the server?":"Please refer to the video to understand the various channels on the server: https://youtu.be/6992xZ0OAa0?si=4EKogZxqSTSermAm",
+    "Programs organized by C4GT":"C4GT organizes the Dedicated Mentoring Program every year. Its an annual three month long coding program. Check out for more details: https://www.codeforgovtech.in/c4gt-2024/",
+    "How to set up a C4GT College GovTech Office":"C4GT GovTech Offices are experiential centers being set up in colleges across the globe where student members of each Office will get an opportunity to work closely with a variety of DPGs/DPI & Tech for Good organizations and contribute to their products that are creating population scale impact! Apply here: https://docs.google.com/forms/d/e/1FAIpQLScmOnOcBaiuOpnK0ZP98ed6XRXisNzC7d5vCzRe0aT_tEp6og/viewform",
+    "Sign Up":[
+       "Signing up",
+       "How to link my GitHub account to Discord?"
+    ],
+    "Signing up":"Please ensure that you have completed the following steps to sign up for the community: Respond to the five onboarding questions in the #onboarding channel by reacting to them with the respective emojis. Based on your response, you’ll get access to the #authorize channel. You’ll land on the #authorize channel: Link your GitHub account to Discord in this channel to become eligible for rewards and unlock all channels 🔗. Introductions: Introduce yourself and say hello to your community mates in the #introductions channel. 👋. Rules & Regulations: Read the rules and regulations (it is super important) 📜Congratulations! You’re now an official member",
+    "How to link my GitHub account to Discord?":"During the onboarding process, you need to visit the #authorize channel and click on “Authenticate GitHub” to do the linking. You’ll be redirected to an external site and will land back once it's done. You’ll get a “Verified Contributor” role once the linking is done. Sometimes, it takes 24 hours to reflect.",
+    "Find Projects":[
+       "Where to find open projects?",
+       "How to find the most suitable projects for me?",
+       "What are the kinds of projects available?",
+       "Is there any eligibility criteria for attempting open community projects?"
+    ],
+    "Where to find open projects?":"Check out the list of all open projects in the C4GT Community here: https://www.codeforgovtech.in/community-program-projects/",
+    "How to find the most suitable projects for me?":"The community projects list can be filtered using multiple filters such as tech stacks used, listing organization, complexity & type. For example, if you’re a beginner, you can search for foundational and low-complexity issues to start with.",
+    "What are the kinds of projects available?":"The community has four kinds of projects across complexities (measured by the time taken to solve them) and which can be paid or unpaid. They can be coding & design problem statements. We also have projects that give you the opportunity to mentor other contributors in the community & advise organizations on higher-level product thinking, design & architecture.",
+    "Is there any eligibility criteria for attempting open community projects?":"All coding & design projects of foundational to high complexity levels are open for anyone to contribute. Advanced-level projects, Mentorship & Advisory projects are assigned through a Google form-based selection process.",
+    "Start Contributing":[
+       "How to kickstart contributing?",
+       "How can a beginner grow in the community?",
+       "How can I contribute as an advanced contributor?",
+       "Should I wait to be assigned a project before contributing?"
+    ],
+    "How to kickstart contributing?":"Its recommended to go through the guide in detail to understand the community. Link: https://github.com/Code4GovTech/C4GT/wiki/Get-Started-with-your-Open%E2%80%90Source-Contributions",
+    "How can a beginner grow in the community?":"As a beginner, it's crucial to refer to the guide and resources and start with foundational and low-complexity issues. The best way to learn and grow in the community is by getting hands-on experience, making mistakes, and seeking support along the way. Taking full ownership of your learning is key to growth in the community. Putting in rigorous effort in self-learning, connecting with your peers, and asking for guidance from organization mentors will anchor your journey to excellence.",
+    "How can I contribute as an advanced contributor?":"For advanced contributors, we have special projects in the community. Skilled and experienced contributors can preferably apply for advanced-level projects, give mentorship on projects & advise organizations on higher-level design thinking.",
+    "Should I wait to be assigned a project before contributing?":"No, there is no assignment of projects in the community. You need to raise a PR directly on the GitHub project or raise a draft PR to align it with the mentor. The PRs get merged on a first come first serve basis. Please respect the time commitments of the mentors. They may take some time to reply and review your PRs.",
+    "Need Support in Contributing":[
+       "How should I raise a PR in the C4GT community?",
+       "What are the available resources for upskilling myself for contributing?",
+       "How to leverage ChatGPT to effectively contribute?",
+       "Where can I get detailed videos on the products listed by organizations in the community?",
+       "How to join live upskilling workshops conducted by experts?",
+       "How to contact the mentors/maintainers of the projects?",
+       "How to leverage Discord in the contribution process?",
+       "How to reach out to community leaders for help?"
+    ],
+    "How should I raise a PR in the C4GT community?":"To learn how to raise a PR, please refer to the guide: https://github.com/Code4GovTech/C4GT/wiki/Get-Started-with-your-Open%E2%80%90Source-Contributions",
+    "What are the available resources for upskilling myself for contributing?":"Vedant Khairnar please add",
+    "How to leverage ChatGPT to effectively contribute?":"Vedant Khairnar please add",
+    "Where can I get detailed videos on the products listed by organizations in the community?":"Vedant Khairnar WIP",
+    "How to join live upskilling workshops conducted by experts?":"Please keep checking the announcements channel and events tab regularly for updates about upcoming events.",
+    "How to contact the mentors/maintainers of the projects?":"All kinds of clarification questions related to the project need to be asked in the GitHub ticket comments. You can also share your approach to solving a project and any other related information in the comments itself.",
+    "How to leverage Discord in the contribution process?":"Every organization in the community has a dedicated channel for enabling interaction with mentors, respective community leaders & your peers working on the same org’s projects. You can enable these channels in “Roles & Channels”.",
+    "How to reach out to community leaders for help?":"For project-specific queries, you can reach out to the CLs tagging #Community Leaders in the particular org channel. For other queries & support, do the same in the #let’s discuss channel",
+    "Explore Rewards":[
+       "How do we get rewards in the C4GT Community?",
+       "How can I check my C4GT Points?",
+       "How to download my C4GT GitHub Profile & Certificates?"
+    ],
+    "How do we get rewards in the C4GT Community?":"C4GT rewards contributors on the basis of a gamified Points system. On solving a project (merging a PR), a contributor gets certain C4GT points that’s mentioned on the project ticket itself. As the contributor gains more points, at every level, there’s entitlement to certain rewards. Read more about the points system here: https://github.com/Code4GovTech/C4GT/wiki/Point-System-for-Contributors",
+    "How can I check my C4GT Points?":"You can check your C4GT points on the leaderboard. Here’s it: https://www.codeforgovtech.in/leaderboard/",
+    "How to download my C4GT GitHub Profile & Certificates?":"You can download your GitHub profile & certificates by using the “Certificates & DPG Profile” channel. Follow the steps mentioned in the channel",
+    "Get Employment":[
+       "How to become eligible for jobs & internships in the C4GT Community?",
+       "Where can I find the available job & internship opportunities?"
+    ],
+    "How to become eligible for jobs & internships in the C4GT Community?":"Most job & internship opportunities listed in the community have their eligibility criteria as a certain level of C4GT points. Having past contributions and a good C4GT Points score always gives you an edge in cracking these opportunities.",
+    "Where can I find the available job & internship opportunities?":"Please check out the #announcements and #career-hub channel to keep yourself updated about the open job & internship opportunities.",
+    "Have grievances?":[
+       "What to do if verified contributor role isn't displaying even after 24hrs?",
+       "Why I'm not able to access all channels?"
+    ],
+    "What to do if verified contributor role isn't displaying even after 24hrs?":"If you’re not able to see the “verified contributor” role after waiting for 24 hours, leave the server and redo the entire onboarding process. If you’re still not able to see the role, please raise a query ticket on #queries channel",
+    "Why I'm not able to access all channels?":"No, you will not get access to any useful channels without completing the onboarding"
+ }
