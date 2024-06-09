@@ -8,7 +8,7 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
-# Retrieve the bot token from the environment variable
+# Retrieve the bot token and channel ID from the environment variables
 DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 CHANNELID = int(os.getenv('CHANNELID'))
 # Define your API endpoint
@@ -41,6 +41,9 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
+    if message.channel.id != CHANNELID:
+        return  # Ignore messages not from the allowed channel
+
     if not message.content.startswith('/'):
         await message.channel.send("Please type commands only.", delete_after=10)
         await message.delete()
@@ -50,27 +53,13 @@ async def on_message(message):
 
 @bot.tree.command(name="menu")
 async def menu(interaction: discord.Interaction):
+    if interaction.channel_id != CHANNELID:
+        await interaction.response.send_message("This command can only be used in the allowed channel.", ephemeral=True)
+        return
+
     await interaction.response.send_message("Please select an option from the menu:", ephemeral=True)
     await show_menu(interaction, "menu")
-#for questions inside buttons
-# async def show_menu(interaction, menu_key):
-#     # Fetch options from the options data
-#     options = options_data.get(menu_key, [])
 
-#     if not options:
-#         await interaction.followup.send("No options available.", ephemeral=True)
-#         return
-
-#     questions_text = "\n".join([f"{idx + 1}. {opt}" for idx, opt in enumerate(options)])
-#     await interaction.followup.send(f"Please choose an option from {menu_key}:\n\n{questions_text}", ephemeral=True)
-
-#     view = View()
-#     for idx in range(len(options)):
-#         view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
-
-#     await interaction.followup.send(view=view, ephemeral=True)
-
-#for keys inside buttons
 async def show_menu(interaction, menu_key):
     # Fetch options from the options data
     options = options_data.get(menu_key, [])
