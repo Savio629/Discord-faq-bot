@@ -53,27 +53,47 @@ async def menu(interaction: discord.Interaction):
     await interaction.response.send_message("Please select an option from the menu:", ephemeral=True)
     await show_menu(interaction, "menu")
 
+# async def show_menu(interaction, menu_key):
+#     # Fetch options from the options data
+#     options = options_data.get(menu_key, [])
+
+#     if not options:
+#         await interaction.followup.send("No options available.", ephemeral=True)
+#         return
+
+#     questions_text = "\n".join([f"{idx + 1}. {opt}" for idx, opt in enumerate(options)])
+#     await interaction.followup.send(f"Please choose an option from {menu_key}:\n\n{questions_text}", ephemeral=True)
+
+#     view = View()
+#     for idx in range(len(options)):
+#         view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
+
+#     await interaction.followup.send(view=view, ephemeral=True)
 async def show_menu(interaction, menu_key):
     # Fetch options from the options data
     options = options_data.get(menu_key, [])
 
     if not options:
-        await interaction.followup.send("No options available.", ephemeral=True)
+        embed = discord.Embed(title="Error", description="No options available.", color=discord.Color.red())
+        await interaction.followup.send(embed=embed, ephemeral=True)
         return
 
-    view = View()
-    for option in options:
-        view.add_item(OptionButton(label=option))
+    questions_text = "\n".join([f"{idx + 1}. {opt}" for idx, opt in enumerate(options)])
+    embed = discord.Embed(title=f"Please choose an option from {menu_key}:", description=questions_text, color=discord.Color.blue())
 
-    await interaction.followup.send(f"Please choose an option from {menu_key}:", view=view, ephemeral=True)
+    view = View()
+    for idx in range(len(options)):
+        view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
+
+    await interaction.followup.send(embed=embed, view=view, ephemeral=True)
 
 class OptionButton(Button):
-    def __init__(self, label):
-        super().__init__(label=label, style=discord.ButtonStyle.primary)
+    def __init__(self, label, custom_id):
+        super().__init__(label=label, style=discord.ButtonStyle.primary, custom_id=custom_id)
     
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer()
-        option_key = self.label
+        option_key = self.custom_id
         # Fetch data for the selected option from JSON file
         data = options_data.get(option_key)
         if data:
