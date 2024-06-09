@@ -76,6 +76,9 @@ async def show_menu(interaction, menu_key):
     for idx in range(len(options)):
         view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
 
+    if menu_key != "menu":  # Add "Back to Main Menu" button if not on the main menu
+        view.add_item(BackToMenuButton())
+
     await interaction.followup.send(embed=embed, view=view, ephemeral=True)
 
 class OptionButton(Button):
@@ -96,6 +99,14 @@ class OptionButton(Button):
                 await interaction.followup.send(data, ephemeral=True)
         else:
             await interaction.followup.send("Data not available for this option.", ephemeral=True)
+
+class BackToMenuButton(Button):
+    def __init__(self):
+        super().__init__(label="Back to Main Menu", style=discord.ButtonStyle.danger)
+    
+    async def callback(self, interaction: discord.Interaction):
+        await interaction.response.defer()
+        await show_menu(interaction, "menu")
 
 # Run the bot with your token
 bot.run(DISCORD_TOKEN)
