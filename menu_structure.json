@@ -7,7 +7,8 @@
        "Need Support in Contributing",
        "Explore Rewards",
        "Get Employment",
-       "Have grievances?"
+       "Have grievances?",
+       "My query is missing or not answered"
     ],
     "A guide to C4GT":[
        "What is C4GT?",
@@ -82,5 +83,6 @@
        "Why I'm not able to access all channels?"
     ],
     "What to do if verified contributor role isn't displaying even after 24hrs?":"If you’re not able to see the “verified contributor” role after waiting for 24 hours, leave the server and redo the entire onboarding process. If you’re still not able to see the role, please raise a query ticket on #queries channel",
-    "Why I'm not able to access all channels?":"No, you will not get access to any useful channels without completing the onboarding"
+    "Why I'm not able to access all channels?":"No, you will not get access to any useful channels without completing the onboarding",
+    "My query is missing or not answered": "This option is to report missing or unanswered queries. Please state your query in the #query channel."
  }

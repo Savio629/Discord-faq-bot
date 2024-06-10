@@ -36,29 +36,18 @@ async def on_ready():
     except Exception as e:
         print(f'Failed to sync commands: {e}')
 
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    if message.channel.id != CHANNELID:
-        return  # Ignore messages not from the allowed channel
-
-    if not message.content.startswith('/'):
-        await message.channel.send("Please type commands only.", delete_after=10)
-        await message.delete()
-        return
-
-    await bot.process_commands(message)
-
-@bot.tree.command(name="menu")
-async def menu(interaction: discord.Interaction):
-    if interaction.channel_id != CHANNELID:
-        await interaction.response.send_message("This command can only be used in the allowed channel.", ephemeral=True)
-        return
-
-    await interaction.response.send_message("Please select an option from the menu:", ephemeral=True)
-    await show_menu(interaction, "menu")
+    # Generate the menu options directly in the channel
+    channel = bot.get_channel(CHANNELID)
+    if channel:
+        menu_key = "menu"
+        options = options_data.get(menu_key, [])
+        if options:
+            questions_text = "\n".join([f"{idx + 1}. {opt}" for idx, opt in enumerate(options)])
+            embed = discord.Embed(title=f"Please choose an option from {menu_key}:", description=questions_text, color=discord.Color.blue())
+            view = View()
+            for idx in range(len(options)):
+                view.add_item(OptionButton(label=str(idx + 1), custom_id=options[idx]))
+            await channel.send(embed=embed, view=view)
 
 async def show_menu(interaction, menu_key):
     # Fetch options from the options data
